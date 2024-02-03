@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class Animal {
+public abstract class Animal {
     protected String name;
     protected LocalDate birthday;
     protected Illness illness;
@@ -27,7 +27,7 @@ public class Animal {
         System.out.println(getType() + " охотится");
     }
 
-    private void eat(){
+    private void eats(){
         System.out.println(getType() + " кушает");
     }
 
@@ -38,7 +38,7 @@ public class Animal {
     public void lifeCycle(){
         wakeUp();
         hunt();
-        eat();
+        eats();
         sleep();
     }
 
@@ -79,4 +79,6 @@ public class Animal {
     public void swim() {
         System.out.println(name + " может плавать");
     }
+
+    public abstract void eat();
 }

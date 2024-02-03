@@ -8,4 +8,9 @@ public class Duc extends Animal {
         this.wingCount = wingCount;
     }
 
+
+    @Override
+    public void eat() {
+        System.out.println(" клюет");
+    }
 }
